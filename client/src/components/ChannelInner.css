@@ -1,0 +1,146 @@
+.team-channel-header-name-wrapper {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    max-width: 500px;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  @media screen and (min-width: 1070px) {
+    .team-channel-header-name-wrapper {
+      max-width: 700px;
+    }
+  }
+  
+  .team-channel-header-name-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .team-channel-header-name-wrapper .str-chat-avatar {
+    margin-right: 8px;
+  }
+
+  .team-channel-header-name-wrapper {
+    height: 100%;
+    max-width: unset;
+  }
+
+  
+  .team-channel-header-name-multi {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  
+  .team-channel-header-name-multi:nth-child(3) {
+    margin-right: 0px;
+  }
+  
+
+  .team-channel-header-name-multi {
+    margin-right: 8px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .team-channel-header-name {
+    font-family: Helvetica Neue, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c2c30;
+    margin-right: 8px;
+  }
+
+  .team-channel-header-name.user {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .team-channel-header-name.user {
+    font-size: 10px;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .team-channel-header-channel-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .team-channel-header-channel-wrapper svg {
+    cursor: pointer;
+  }
+
+  .team-channel-header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 10px;
+      padding-right: 10px;
+    height: 70px;
+  }
+
+  .team-channel-header-right {
+    display: flex;
+    padding-left: 10px;
+  }
+
+  .team-channel-header-right svg {
+    margin-left: 16px;
+    margin-right: 4px;
+  }
+  
+  .team-channel-header-right-text {
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 14px;
+    color: #858688;
+  }
+  
+  .team-channel-header-right {
+    display: flex;
+    padding-left: 10px;
+  }
+  
+  .thread-message-input__wrapper .str-chat__input--emojipicker {
+    z-index: 3;
+    top: 183px;
+    right: 299px;
+    width: 338px;
+  }
+
+  .str-chat__message-team-meta time {
+    visibility: visible !important   ;
+    z-index: 2;
+    font-family: Helvetica Neue, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #858688;
+    margin-top: 4px;
+    
+    
+  }
+
+
+  .str-chat__message-team--middle time {
+    display: none;
+  
+    
+  }
+  .str-chat__message-team--bottom time {
+   display: none;
+
+    
+  }
+
+  .str-chat__message-team--editing {
+    padding: 10px;
+    background: lightgray !important;
+    box-shadow: 0 0 11px 0 rgb(0 0 0 / 6%), inset 0 1px 0 0 #006cff, inset 0 -1px 0 0 #006cff;
+    z-index: 1;
+}
+  
+  

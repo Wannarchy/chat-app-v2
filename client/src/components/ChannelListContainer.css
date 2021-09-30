@@ -1,0 +1,34 @@
+.channel-list-header {
+    padding-left: 16px;
+    height: 62px;
+  }
+  
+  .channel-list-header-text {
+    font-family: Helvetica Neue, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+  }
+
+  .channel-list-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+    width: 240px;
+  }
+
+  .test  {
+    color: white;
+  }
+
+  .channel-list-header-icon img {
+ background-color: white;
+    cursor: pointer;
+   
+padding: 1px;
+    border-radius: 9999px;
+   
+  }
+  
