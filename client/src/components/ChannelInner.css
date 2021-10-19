@@ -1,4 +1,4 @@
-.team-channel-header-name-wrapper {
+.messaging-channel-header-name-wrapper {
     flex: 3;
     display: flex;
     align-items: center;
@@ -10,43 +10,43 @@
   }
   
   @media screen and (min-width: 1070px) {
-    .team-channel-header-name-wrapper {
+    .messaging-channel-header-name-wrapper {
       max-width: 700px;
     }
   }
   
-  .team-channel-header-name-wrapper::-webkit-scrollbar {
+  .messaging-channel-header-name-wrapper::-webkit-scrollbar {
     display: none;
   }
 
-  .team-channel-header-name-wrapper .str-chat-avatar {
+  .messaging-channel-header-name-wrapper .str-chat-avatar {
     margin-right: 8px;
   }
 
-  .team-channel-header-name-wrapper {
+  .messaging-channel-header-name-wrapper {
     height: 100%;
     max-width: unset;
   }
 
   
-  .team-channel-header-name-multi {
+  .messaging-channel-header-name-multi {
     display: flex;
     align-items: center;
     margin-right: 8px;
   }
   
-  .team-channel-header-name-multi:nth-child(3) {
+  .messaging-channel-header-name-multi:nth-child(3) {
     margin-right: 0px;
   }
   
 
-  .team-channel-header-name-multi {
+  .messaging-channel-header-name-multi {
     margin-right: 8px;
     align-items: center;
     flex-direction: column;
   }
 
-  .team-channel-header-name {
+  .messaging-channel-header-name {
     font-family: Helvetica Neue, sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -54,27 +54,27 @@
     margin-right: 8px;
   }
 
-  .team-channel-header-name.user {
+  .messaging-channel-header-name.user {
     font-weight: 500;
     font-size: 14px;
   }
 
-  .team-channel-header-name.user {
+  .messaging-channel-header-name.user {
     font-size: 10px;
     margin: 5px;
     text-align: center;
   }
 
-  .team-channel-header-channel-wrapper {
+  .messaging-channel-header-channel-wrapper {
     display: flex;
     align-items: center;
   }
   
-  .team-channel-header-channel-wrapper svg {
+  .messaging-channel-header-channel-wrapper svg {
     cursor: pointer;
   }
 
-  .team-channel-header-container {
+  .messaging-channel-header-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -83,23 +83,27 @@
     height: 70px;
   }
 
-  .team-channel-header-right {
+  .messaging-channel-header-right {
     display: flex;
     padding-left: 10px;
   }
 
-  .team-channel-header-right svg {
+  .messaging-channel-header-right svg {
     margin-left: 16px;
     margin-right: 4px;
   }
   
-  .team-channel-header-right-text {
+  .messaging-channel-header-right-text {
     font-family: Helvetica Neue, sans-serif;
-    font-size: 14px;
-    color: #858688;
+    font-size: 20px;
+    color: white;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
   }
   
-  .team-channel-header-right {
+  .messaging-channel-header-right {
     display: flex;
     padding-left: 10px;
   }
@@ -112,7 +116,7 @@
   }
 
   .str-chat__message-team-meta time {
-    visibility: visible !important   ;
+    visibility: visible    ;
     z-index: 2;
     font-family: Helvetica Neue, sans-serif;
     font-style: normal;
@@ -126,12 +130,12 @@
 
 
   .str-chat__message-team--middle time {
-    display: none;
+    visibility: visible;
   
     
   }
   .str-chat__message-team--bottom time {
-   display: none;
+   visibility: visible;
 
     
   }

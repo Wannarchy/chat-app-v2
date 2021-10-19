@@ -1,0 +1,70 @@
+.messaging-channel-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  
+  .messaging-channel-list-message.loading {
+    height: 115px;
+  }
+  
+  .messaging-channel-list-header {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .messaging-channel-list-header svg {
+    cursor: pointer;
+  }
+  
+  .messaging-channel-list-header-title {
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    height: 16px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+  }
+
+
+  
+  .messaging-channel-list-message.loading {
+    height: 115px;
+  }
+
+  .messaging-channel-list p {
+ color: white;
+ padding: 0 16px;
+  }
+
+
+
+  .messaging-channel-list > .messaging-channel-list-overflow {
+    height: auto;
+    overflow-y: scroll;
+  margin-right: 5px;
+  }
+
+ .str-chat-channel-list{
+    height: 73% !important;
+  }
+  .scroller::-webkit-scrollbar {
+    scrollbar-width: thin;
+   width: 6px;
+   display: none;
+  
+    
+  }
+
+  .scroller::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.548);
+    border-radius: 50px;
+    
+  }
+
+  
+

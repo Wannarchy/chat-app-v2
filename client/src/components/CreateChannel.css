@@ -66,4 +66,27 @@
   }
   
 
+  .create-channel-button-wrapper {
+    height: 82px;
+    background: #f7f6f8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom-right-radius: 16px;
+  
+    padding: 0px 10px;
+  }
+  
+  .create-channel-button-wrapper p {
+    background: var(--primary-color);
+    font-family: Helvetica Neue, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+
   

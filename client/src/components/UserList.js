@@ -45,6 +45,7 @@ const UserList = ({setSelectedUsers }) => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [listEmpty, setListEmpty] = useState(false);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
      const getUsers = async () => {
@@ -65,13 +66,34 @@ const UserList = ({setSelectedUsers }) => {
                 setListEmpty(true);
             }
          } catch (error){
-            console.log(error);
+           setError(true);
          }
          setLoading(false);
      }
 
      if(client) getUsers ()
-    }, [])
+    }, []);
+    if(error){
+        return (
+            <ListContainer>
+
+                <div className="user-list-message">
+                    Erreur de chargement , réessayer.
+                </div>
+            </ListContainer>
+        )
+    }
+
+    if(listEmpty){
+        return (
+            <ListContainer>
+
+                <div className="user-list-message">
+                   Utilisateur introuvable.
+                </div>
+            </ListContainer>
+        )
+    }
 
     return (
        <ListContainer>

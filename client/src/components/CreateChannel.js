@@ -5,37 +5,43 @@ import './CreateChannel.css';
 import { UserList } from './';
 import { CloseCreateChannel } from '../assets';
 
-const ChannelNameInput =({ channelName = '', setChannelName}) => {
-  
-    const handleChange=(event) => {
-        event.preventDefault();
-
-        setChannelName(event.target.value)
-    }
-    return (
-        <div className="channel-name-input-wrapper">
-            <p>Name</p>
-            <input value={channelName} onChange={handleChange} placeholder="Channel-name"/>
-            <p>Add Members</p>
-        </div>
-    )
-}
 
 
 const CreateChannel = ({createType, setIsCreating}) => {
     const {client, setActiveChannel} = useChatContext();
     const [selectedUsers, setSelectedUsers] = useState([client.userID || '']);
+     const [channelName, setChannelName] = useState('');
+     const createChannel = async (e) => {
+        e.preventDefault();
 
-     const [channelName, setChannelName] = useState('')
+        try {
+            const newChannel = await client.channel(createType,channelName, { name : channelName, members: selectedUsers});
+
+            await newChannel.watch();
+
+            setChannelName('');
+            setIsCreating(false);
+            setSelectedUsers([client.userID]);
+            setActiveChannel(newChannel);
+        } catch (error) {
+
+            
+            
+        }
+     }
+
     return (
         <div className="create-channel-container">
           <div className="create-channel-header">
-              <p>{createType === 'team' ? 'créée un nouveau canal' :  'messageri direct' }</p>
+              <p>  discussion instantanée</p>
               <CloseCreateChannel setIsCreating={setIsCreating} />
               
           </div>
-          {createType === 'team' && <ChannelNameInput channelName={channelName} setChannelName={setChannelName}/> }
+        
           <UserList setSelectedUsers={setSelectedUsers} />
+          <div className="create-channel-button-wrapper" onClick={createChannel} >
+            <p>créer une discussion  </p>
+          </div>
         </div>
     )
 }

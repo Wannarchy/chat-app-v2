@@ -1,7 +1,7 @@
  
 :root {
     --primary-color: rgba(0, 0, 0, 0.897);
-    --primary-color-alpha: #005fff1a;
+    
   }
   
   html,
@@ -24,11 +24,137 @@
 
 .app-wrapper {
     display: flex;
-    flex: 1;
+   
     /* height: 800px; */
     height: 100%;
     /* border-radius: 16px; */
     box-shadow: rgba(0, 0, 0, 0.33) 0px 1px 4px 0px;
   }
 
+
+
+
+
+
+
   
+
+  
+  @media screen and (max-width: 320px) {
+    .channel-list-sidebar {
+      display: none;
+    }
+  }
+
+
+  @media screen and (max-width: 450px) {
+    .channel-preview-item.multi {
+      width: 150px;
+    }
+  
+    .channerl-list-container-toggle {
+      right: -5%;
+    }
+
+   .channel-preview-content p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+     width: auto;
+  }
+    
+  }
+
+  @media screen and (max-width: 650px) {
+    .channerl-list-container-toggle {
+      right: -3%;
+    }
+    .channel-list-container-responsive {
+     display: flex;
+      
+      
+    }
+   
+  }
+/* -------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------- */
+  @media screen and (max-width: 800px) {
+    .channel-list-container {
+      display: none;
+    }
+  
+  
+    .messaging-channel-header-container {
+      height: 70px;
+    }
+  
+    .messaging-channel-header-name-wrapper {
+      height: 100%;
+      max-width: unset;
+    }
+  
+    .messaging-channel-header-name-multi {
+      margin-right: 8px;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .messaging-channel-header-name.user {
+      font-size: 10px;
+      margin: 5px;
+      text-align: center;
+    }
+  
+    .messaging-channel-header-right {
+      display: flex;
+      padding-left: 10px;
+    }
+  
+    .channel-list-container-responsive {
+      display: flex;
+     
+      
+    }
+  
+    .channel-list-list-wrapper {
+      width: 100%;
+      background: #101010;
+    }
+  
+    .channerl-list-container-toggle {
+      display: flex;
+    }
+  
+    .channel-search-input-wrapper {
+      width: 90%;
+      padding-left: 10px;
+      justify-content: flex-start;
+    }
+  
+    .channel-search-input-text {
+      width: inherit;
+    }
+  
+    .channel-preview-item.multi {
+      width: 80%;
+    }
+  
+   
+  }

@@ -30,22 +30,24 @@ const ChannelInner = ({ setIsEditing }) => {
     }
   };
 
+  
+
   return (
     <GiphyContext.Provider value={{ giphyState, setGiphyState }}>
       <div style={{ display: 'flex', width: '100%' }}>
         <Window>
-          <TeamChannelHeader setIsEditing={setIsEditing} />
+          <MessagingChannelHeader setIsEditing={setIsEditing} />
           <MessageList />
           <MessageInput overrideSubmitHandler={overrideSubmitHandler} />
         </Window>
-        <Thread />
+       
       </div>
     </GiphyContext.Provider>
   );
 };
 
-const TeamChannelHeader = ({ setIsEditing }) => {
-    const { channel, watcher_count } = useChannelStateContext();
+const MessagingChannelHeader = ({ setIsEditing }) => {
+    const { channel} = useChannelStateContext();
     const { client } = useChatContext();
   
     const MessagingHeader = () => {
@@ -54,22 +56,22 @@ const TeamChannelHeader = ({ setIsEditing }) => {
   
       if(channel.type === 'messaging') {
         return (
-          <div className='team-channel-header-name-wrapper'>
+          <div className='messaging-channel-header-name-wrapper'>
             {members.map(({ user }, i) => (
-              <div key={i} className='team-channel-header-name-multi'>
+              <div key={i} className='messaging-channel-header-name-multi'>
                 <Avatar image={user.image} name={user.fullName || user.id} size={32} />
-                <p className='team-channel-header-name user'>{user.fullName || user.id}</p>
+                <p className='messaging-channel-header-name user'>{user.fullName || user.id}</p>
               </div>
             ))}
   
-            {additionalMembers > 0 && <p className='team-channel-header-name user'>and {additionalMembers} more</p>}
+            {additionalMembers > 0 && <p className='messaging-channel-header-name user'>et {additionalMembers} plus</p>}
           </div>
         );
       }
   
       return (
-        <div className='team-channel-header-channel-wrapper'>
-          <p className='team-channel-header-name'># {channel.data.name}</p>
+        <div className='messaging-channel-header-channel-wrapper'>
+          <p className='messaging-channel-header-name'># {channel.data.name} p</p>
           <span style={{ display: 'flex' }} onClick={() => setIsEditing(true)}>
             <ChannelInfo />
           </span>
@@ -80,14 +82,17 @@ const TeamChannelHeader = ({ setIsEditing }) => {
     const getWatcherText = (watchers) => {
       if (!watchers) return 'No users online';
       if (watchers === 1) return '1 user online';
-      return `${watchers} users online`;
+      return `${watchers} Utilisateurs en ligne`;
     };
+    const deleteChannel = async () => { 
+      const destroy = await channel.delete();
+    }
   
     return (
-      <div className='team-channel-header-container'>
+      <div className='messaging-channel-header-container'>
         <MessagingHeader />
-        <div className='team-channel-header-right'>
-          <p className='team-channel-header-right-text'>{getWatcherText(watcher_count)}</p>
+        <div className='messaging-channel-header-right'>
+          <button className='messaging-channel-header-right-text' onClick={deleteChannel} >X </button>
         </div>
       </div>
     );

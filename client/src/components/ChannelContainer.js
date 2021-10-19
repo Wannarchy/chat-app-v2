@@ -26,7 +26,7 @@ const ChannelContainer = (
 
     const EmptyState = () => (
         <div className="channel-empty-container">
-            <p className="channel-empty-first"> Cest le commencer du Chat</p>
+            <p className="channel-empty-first"> C'est le commencement du Chat</p>
             <p className="channel-empty-second"> envoie d'image , fichier et etc...</p>
         </div>
     )
