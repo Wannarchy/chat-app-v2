@@ -57,6 +57,8 @@
   .messaging-channel-header-name.user {
     font-weight: 500;
     font-size: 14px;
+    margin: 5px;
+    text-align: center;
   }
 
   .messaging-channel-header-name.user {

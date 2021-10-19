@@ -27,7 +27,7 @@ const TeamChannelList = ({setToogleContainer,children, error = false, loading, t
         <div className="messaging-channel-list">
             <div className="messaging-channel-list-header">
                 <p className="messaging-channel-list-header-title">
-                Discussion
+                Discussions
                 </p>
                 
                 <AddChannel  

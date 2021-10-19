@@ -59,7 +59,7 @@ const MessagingChannelHeader = ({ setIsEditing }) => {
           <div className='messaging-channel-header-name-wrapper'>
             {members.map(({ user }, i) => (
               <div key={i} className='messaging-channel-header-name-multi'>
-                <Avatar image={user.image} name={user.fullName || user.id} size={32} />
+                <Avatar image={user.image} name={user.fullName || user.id} size={34} />
                 <p className='messaging-channel-header-name user'>{user.fullName || user.id}</p>
               </div>
             ))}
@@ -79,11 +79,7 @@ const MessagingChannelHeader = ({ setIsEditing }) => {
       );
     };
   
-    const getWatcherText = (watchers) => {
-      if (!watchers) return 'No users online';
-      if (watchers === 1) return '1 user online';
-      return `${watchers} Utilisateurs en ligne`;
-    };
+  
     const deleteChannel = async () => { 
       const destroy = await channel.delete();
     }

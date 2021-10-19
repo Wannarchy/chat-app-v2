@@ -33,14 +33,14 @@ const CreateChannel = ({createType, setIsCreating}) => {
     return (
         <div className="create-channel-container">
           <div className="create-channel-header">
-              <p>  discussion instantanée</p>
+              <p>  Discussions instantanées</p>
               <CloseCreateChannel setIsCreating={setIsCreating} />
               
           </div>
         
           <UserList setSelectedUsers={setSelectedUsers} />
           <div className="create-channel-button-wrapper" onClick={createChannel} >
-            <p>créer une discussion  </p>
+            <p>Créer une discussion  </p>
           </div>
         </div>
     )

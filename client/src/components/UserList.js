@@ -9,8 +9,8 @@ const ListContainer = ({ children}) => {
     return (
         <div className="user-list-container">
              <div className="user-list-header">
-                 <p>User</p>
-                 <p>Invite</p>
+                 <p>Utilisateur</p>
+                 <p>Inviter</p>
              </div>
              {children}
         </div>
