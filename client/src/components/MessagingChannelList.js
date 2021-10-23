@@ -3,12 +3,12 @@ import React from 'react';
 import { AddChannel } from '../assets';
 import './MessagingChannelList.css';
 
-const TeamChannelList = ({setToogleContainer,children, error = false, loading, type, isCreating,  setIsCreating, setCreateType, setIsEditing}) => {
+const MessagingChannelList = ({setToogleContainer,children, error = false, loading, type, isCreating,  setIsCreating, setCreateType, setIsEditing}) => {
     if(error){
          return type === 'messaging' ? (
             <div className="messaging-channel-list">
                 <p className="messaging-channel-list-message">
-                    Connection attendez un moment  puis réessayez. 
+                    Connexion attendez un moment  puis réessayez. 
                 </p>
             </div>
          ) : null
@@ -50,4 +50,4 @@ const TeamChannelList = ({setToogleContainer,children, error = false, loading, t
     )
 }
 
-export default TeamChannelList
+export default MessagingChannelList

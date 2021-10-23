@@ -13,7 +13,6 @@ const initialState = {
     fullName : '',
     username : '',
     password : '',
-    confirmPassword : '',
     phoneNumber : '',
     avatarURL : '',
 }
@@ -127,18 +126,7 @@ const handleSubmit = async (e) => {
                                  required
                                  />
                              </div>
-                             {isSignup && (
-                             <div className="auth-form-container-fields-content-input">
-                                 <label htmlFor="confirmPassword">Confirmez le mot de passe</label>
-                                 <input
-                                 name="confirmPassword"
-                                 type="password"
-                                 placeholder="Confirmez le mot de passe"
-                                 onChange={handleChange}
-                                 required
-                                 />
-                             </div>
-                              )}
+                            
                         <div className="auth-form-container-fields-content-button">
                             <button>  {isSignup ? "S'inscrire" : "Se connecter "}</button>
                         </div>

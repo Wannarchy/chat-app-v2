@@ -148,5 +148,10 @@
     box-shadow: 0 0 11px 0 rgb(0 0 0 / 6%), inset 0 1px 0 0 #006cff, inset 0 -1px 0 0 #006cff;
     z-index: 1;
 }
+
+.str-chat__input-flat .str-chat__textarea > textarea {
+  border:solid thin !important;
+  height: 59px !important;
+}
   
   
