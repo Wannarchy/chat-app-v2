@@ -35,7 +35,7 @@ const handleSubmit = async (e) => {
     
    const { username, password, phoneNumber, avatarURL} = form;
 
-   const URL = 'http://localhost:5000/auth';
+   const URL = 'https://direct-messages.herokuapp.com/auth';
 
    const {data: {token, userId, hashedPassword, fullName }} = await axios.post(`${URL}/${isSignup ? 'signup'  : 'login'}`,{
        username, password, fullName: form.fullName ,phoneNumber,avatarURL,

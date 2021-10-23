@@ -44,6 +44,10 @@
     .channel-list-sidebar {
       display: none;
     }
+
+    .channerl-list-container-toggle {
+      right: -6%;
+    }
   }
 
 
@@ -53,7 +57,7 @@
     }
   
     .channerl-list-container-toggle {
-      right: -5%;
+      right: -6%;
     }
 
    .channel-preview-content p {
@@ -67,7 +71,7 @@
 
   @media screen and (max-width: 650px) {
     .channerl-list-container-toggle {
-      right: -3%;
+      right: -4%;
     }
     .channel-list-container-responsive {
      display: flex;
