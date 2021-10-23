@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Hello, World !');
 });
 
 app.post('/', (req, res) => {
@@ -28,7 +28,7 @@ app.post('/', (req, res) => {
 
     if(type === 'message.new'){
         members
-        .filter((members)=> members.user.id !== sender.id )
+        .filter((member)=> member.user.id !== sender.id )
         .forEach(({user}) => {
                 if(!user.online) {
                     twilioClient.messages.create({
