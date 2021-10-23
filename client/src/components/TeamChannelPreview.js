@@ -60,7 +60,7 @@ const TeamChannelPreview = ({ setActiveChannel, setIsCreating, setIsEditing, set
             
             }
 
-            
+            console.log(channel.state.messages)
            
             const unReadMessage = () => {
                 const countUnread = channel.state.unreadCount;
